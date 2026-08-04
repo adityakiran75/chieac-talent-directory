@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Sample Member",
+    "title": "Public Health Professional",
+    "bio": "A public health professional interested in improving community outcomes through research, collaboration, and evidence-based solutions. Experienced in working with diverse teams and developing programs that support healthier communities.",
+    "email": "sample@example.com",
+    "linkedin": "https://www.linkedin.com/",
+    "resume": "resumes/sample-resume.pdf",
+    "university": "Example University",
+    "degree": "Master's Degree",
+    "skills": [
+      "Research",
+      "Communication",
+      "Data Analysis",
+      "Project Management",
+      "Community Outreach"
+    ],
+    "certifications": [
+      "Example Certification"
+    ],
+    "projects": [
+      "Community Health Improvement Project"
+    ],
+    "interests": [
+      "Public Health",
+      "Community Development"
+    ],
+    "photo": "images/profiles/sample.jpg"
+  }
+]
