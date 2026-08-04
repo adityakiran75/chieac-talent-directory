@@ -9,6 +9,7 @@
     "resume": "resumes/sample-resume.pdf",
     "university": "Example University",
     "degree": "Master's Degree",
+    "location": "Chicago, IL",
     "skills": [
       "Research",
       "Communication",
@@ -20,12 +21,21 @@
       "Example Certification"
     ],
     "projects": [
-      "Community Health Improvement Project"
+      {
+        "name": "Community Health Improvement Project",
+        "description": "Developed a community-based initiative focused on improving access to preventive health resources."
+      }
     ],
     "interests": [
       "Public Health",
       "Community Development"
     ],
-    "photo": "images/profiles/sample.jpg"
+    "employmentInterest": [
+      "Internship",
+      "Full Time Employment"
+    ],
+    "photo": "images/profiles/sample.jpg",
+    "publicDisplayPermission": true,
+    "profileApprovalStatus": "Approved"
   }
 ]
