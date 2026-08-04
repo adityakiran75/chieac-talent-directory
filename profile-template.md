@@ -4,6 +4,8 @@
 
 # Basic Information
 
+Member ID: 
+
 Full Name:
 
 Professional Title:
@@ -23,6 +25,7 @@ Include:
 - Career interests
 - Relevant experience
 
+Bio:
 
 # Contact Information
 
@@ -42,7 +45,7 @@ Degree:
 
 # Skills
 
-List 5-10 professional skills.
+List 5-10 professional skills separated by commas.
 
 Example:
 
@@ -63,15 +66,19 @@ Example:
 
 # Projects
 
-Project Name:
-
-Description:
-
+Project 1
 
 Project Name:
 
 Description:
 
+Project 2
+
+Project Name:
+
+Description:
+
+Additional Project(s):
 
 # Professional Interests
 
@@ -82,9 +89,23 @@ Examples:
 - Research
 - Community Development
 
+# Employment Interest
+
+- Full Time Employment
+- Part Time Employment
+- Per Diem Work
+- Internship
+- Freelance
+- Continuing Education
 
 # Public Display Permission
 
 Member has approved public display of this information:
 
 Yes / No
+
+# ChiEAC Approval Status
+
+Approved for public display:
+
+Approved / Pending / Not Approved
