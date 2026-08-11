@@ -1,40 +1,154 @@
 [
   {
     "id": 1,
-    "name": "Sample Member",
-    "title": "Public Health Professional",
-    "bio": "A public health professional interested in improving community outcomes through research, collaboration, and evidence-based solutions. Experienced in working with diverse teams and developing programs that support healthier communities.",
-    "email": "sample@example.com",
-    "linkedin": "https://www.linkedin.com/",
-    "resume": "resumes/sample-resume.pdf",
+    "name": "Maya Johnson",
+    "title": "Public Health Program Coordinator",
+    "bio": "Maya is an early-career public health professional interested in community health, health equity, and program development. Her experience includes supporting community-based initiatives, conducting research, and communicating health information to diverse audiences. She is particularly interested in opportunities that use evidence-based strategies to improve access to health resources and strengthen community well-being.",
+    "email": "maya.johnson@example.com",
+    "linkedin": "",
+    "resume": "",
     "university": "Example University",
-    "degree": "Master's Degree",
+    "degree": "Master of Public Health",
     "location": "Chicago, IL",
     "skills": [
-      "Research",
-      "Communication",
+      "Public Health Research",
+      "Community Outreach",
+      "Program Evaluation",
       "Data Analysis",
-      "Project Management",
-      "Community Outreach"
+      "Health Communication"
     ],
-    "certifications": [
-      "Example Certification"
-    ],
+    "certifications": ["Example Public Health Certification"],
     "projects": [
       {
-        "name": "Community Health Improvement Project",
-        "description": "Developed a community-based initiative focused on improving access to preventive health resources."
+        "name": "Community Health Needs Assessment",
+        "description": "Analyzed community health information to identify priority needs and opportunities for improving access to local health resources."
+      }
+    ],
+    "interests": ["Public Health", "Community Health", "Health Equity"],
+    "employmentInterest": ["Full Time Employment"],
+    "photo": "images/profiles/placeholder.jpg",
+    "publicDisplayPermission": true,
+    "profileApprovalStatus": "Approved"
+  },
+  {
+    "id": 2,
+    "name": "Daniel Kim",
+    "title": "Data Analyst",
+    "bio": "Daniel is an early-career data analyst interested in using data to support organizational decision-making and community impact. His experience includes cleaning datasets, identifying trends, developing reports, and communicating findings to nontechnical audiences. He is interested in opportunities that combine analytical problem-solving with practical business and community applications.",
+    "email": "daniel.kim@example.com",
+    "linkedin": "",
+    "resume": "",
+    "university": "Example University",
+    "degree": "Master of Science in Data Analytics",
+    "location": "Chicago, IL",
+    "skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Data Visualization",
+      "Data Analysis"
+    ],
+    "certifications": ["Example Data Analytics Certification"],
+    "projects": [
+      {
+        "name": "Community Resource Dashboard",
+        "description": "Developed an interactive dashboard to summarize community resource data and make key trends easier for stakeholders to understand."
       }
     ],
     "interests": [
-      "Public Health",
+      "Data Analytics",
+      "Business Intelligence",
       "Community Development"
     ],
-    "employmentInterest": [
-      "Internship",
-      "Full Time Employment"
+    "employmentInterest": ["Full Time Employment", "Freelance"],
+    "photo": "images/profiles/placeholder.jpg",
+    "publicDisplayPermission": true,
+    "profileApprovalStatus": "Approved"
+  },
+  {
+    "id": 3,
+    "name": "Sofia Martinez",
+    "title": "Project Coordinator",
+    "bio": "Sofia is an early-career project coordinator with experience supporting team operations, organizing project timelines, and communicating across stakeholders. She is interested in roles that combine project management, process improvement, and community-focused work. Her strengths include organization, collaboration, and helping teams move projects from planning through completion.",
+    "email": "sofia.martinez@example.com",
+    "linkedin": "",
+    "resume": "",
+    "university": "Example University",
+    "degree": "Bachelor of Business Administration",
+    "location": "Chicago, IL",
+    "skills": [
+      "Project Management",
+      "Stakeholder Communication",
+      "Process Improvement",
+      "Microsoft Excel",
+      "Team Coordination"
     ],
-    "photo": "images/profiles/sample.jpg",
+    "certifications": ["Example Project Management Certification"],
+    "projects": [
+      {
+        "name": "Community Program Coordination Initiative",
+        "description": "Coordinated project activities, timelines, and stakeholder communication for a community-focused program."
+      }
+    ],
+    "interests": ["Project Management", "Operations", "Community Development"],
+    "employmentInterest": ["Full Time Employment"],
+    "photo": "images/profiles/placeholder.jpg",
+    "publicDisplayPermission": true,
+    "profileApprovalStatus": "Approved"
+  },
+  {
+    "id": 4,
+    "name": "Jordan Williams",
+    "title": "Junior Web Developer",
+    "bio": "Jordan is an early-career web developer interested in building accessible and user-friendly digital experiences. Jordan has experience creating responsive websites and organizing structured content using foundational web technologies. Professional interests include front-end development, accessibility, and using technology to support organizations and communities.",
+    "email": "jordan.williams@example.com",
+    "linkedin": "",
+    "resume": "",
+    "university": "Example University",
+    "degree": "Bachelor of Science in Information Technology",
+    "location": "Chicago, IL",
+    "skills": ["HTML", "CSS", "JavaScript", "Git", "Responsive Web Design"],
+    "certifications": ["Example Web Development Certification"],
+    "projects": [
+      {
+        "name": "Community Organization Website",
+        "description": "Developed a responsive informational website that helped a community organization present programs and resources online."
+      }
+    ],
+    "interests": ["Web Development", "Technology", "Digital Accessibility"],
+    "employmentInterest": ["Full Time Employment", "Freelance"],
+    "photo": "images/profiles/placeholder.jpg",
+    "publicDisplayPermission": true,
+    "profileApprovalStatus": "Approved"
+  },
+  {
+    "id": 5,
+    "name": "Priya Patel",
+    "title": "Business Analyst",
+    "bio": "Priya is an early-career business analyst interested in using data, research, and process improvement to support organizational decision-making. Her experience includes analyzing business information, preparing reports, identifying operational opportunities, and communicating findings to stakeholders. She is interested in roles that combine analytics, strategy, and measurable organizational impact.",
+    "email": "priya.patel@example.com",
+    "linkedin": "",
+    "resume": "",
+    "university": "Example University",
+    "degree": "Master of Business Administration",
+    "location": "Chicago, IL",
+    "skills": [
+      "Business Analysis",
+      "Microsoft Excel",
+      "Data Visualization",
+      "Process Improvement",
+      "Strategic Planning"
+    ],
+    "certifications": ["Example Business Analysis Certification"],
+    "projects": [
+      {
+        "name": "Operational Performance Analysis",
+        "description": "Analyzed operational data and developed recommendations for improving reporting processes and organizational efficiency."
+      }
+    ],
+    "interests": ["Business Analytics", "Strategy", "Operations"],
+    "employmentInterest": ["Full Time Employment"],
+    "photo": "images/profiles/placeholder.jpg",
     "publicDisplayPermission": true,
     "profileApprovalStatus": "Approved"
   }
