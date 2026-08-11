@@ -23,18 +23,32 @@
     </header>
     <main>
       <section class="directory-intro">
+        
+        <div class="directory-controls">
+
+    <div class="search-control">
         <label for="search-input">Search members</label>
-        <button type="button" id="clear-filters">Clear Search</button>
 
         <input
-          type="search"
-          id="search-input"
-          placeholder="Search by name, skill, degree, project, or interest"
+            type="search"
+            id="search-input"
+            placeholder="Search by name, skill, degree, project, or interest"
+        >
+    </div>
 
-          <label for="interest-filter">Filter by professional interest</label>
+    <div class="filter-control">
+        <label for="interest-filter">Filter by professional interest</label>
 
-<select id="interest-filter">
-    <option value="">All Interests</option>
+        <select id="interest-filter">
+            <option value="">All Interests</option>
+        </select>
+    </div>
+
+    <button type="button" id="clear-filters">
+        Clear Filters
+    </button>
+
+</div>
 </select>
         
         <h2>Browse ChiEAC Talent</h2>
@@ -52,6 +66,23 @@
         </div>
       </section>
     </main>
+    
+    <div id="profile-modal" class="modal" hidden>
+    <div class="modal-content">
+        <button
+            type="button"
+            id="close-modal"
+            aria-label="Close profile"
+        >
+            ×
+        </button>
+
+        <div id="modal-profile-content">
+            <!-- Detailed member information will appear here. -->
+        </div>
+    </div>
+</div>
+    
     <footer>
       <p>ChiEAC Talent Directory</p>
       <p>© 2026 ChiEAC. All rights reserved.</p>

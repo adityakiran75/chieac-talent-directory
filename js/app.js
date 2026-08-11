@@ -2,6 +2,9 @@ const profileContainer = document.getElementById("profile-container");
 const searchInput = document.getElementById("search-input");
 const clearFiltersButton = document.getElementById("clear-filters");
 const interestFilter = document.getElementById("interest-filter");
+const profileModal = document.getElementById("profile-modal");
+const modalProfileContent = document.getElementById("modal-profile-content");
+const closeModalButton = document.getElementById("close-modal");
 
 let allMembers = [];
 
@@ -35,21 +38,33 @@ function displayMembers(members) {
     profileCard.classList.add("profile-card");
 
     profileCard.innerHTML = `
+    <img
+    src="${member.photo}"
+    alt="Profile placeholder for ${member.name}"
+    class="profile-photo"
+  >
+
       <h3>${member.name}</h3>
-      <p>${member.title}</p>
+      <p class="profile-title">${member.title}</p>
       <p>${member.bio}</p>
 
       <h4>Skills</h4>
-      <ul>
-        ${member.skills.map((skill) => `<li>${skill}</li>`).join("")}
-      </ul>
+<ul class="skill-list">
+  ${member.skills.map((skill) => `<li>${skill}</li>`).join("")}
+</ul>
 
       <h4>Professional Interests</h4>
-      <ul>
-        ${member.interests.map((interest) => `<li>${interest}</li>`).join("")}
-      </ul>
+<ul class="interest-list">
+  ${member.interests.map((interest) => `<li>${interest}</li>`).join("")}
+</ul>
 
-      <button type="button">View Profile</button>
+      <button
+  type="button"
+  class="view-profile-button"
+  data-member-id="${member.id}"
+>
+  View Profile
+</button>
     `;
 
     profileContainer.appendChild(profileCard);
@@ -111,4 +126,118 @@ clearFiltersButton.addEventListener("click", () => {
   interestFilter.value = "";
 
   applyFilters();
+});
+
+profileContainer.addEventListener("click", (event) => {
+  const button = event.target.closest(".view-profile-button");
+
+  if (!button) {
+    return;
+  }
+
+  const memberId = Number(button.dataset.memberId);
+
+  const selectedMember = allMembers.find((member) => {
+    return member.id === memberId;
+  });
+
+  if (!selectedMember) {
+    return;
+  }
+
+  modalProfileContent.innerHTML = `
+  <img
+    src="${selectedMember.photo}"
+    alt="Profile photo for ${selectedMember.name}"
+    class="profile-photo"
+  >
+
+  <h2>${selectedMember.name}</h2>
+
+  <p class="profile-title">
+    ${selectedMember.title}
+  </p>
+
+  <p>${selectedMember.bio}</p>
+
+  <h3>Education</h3>
+  <p>
+    ${selectedMember.degree}<br>
+    ${selectedMember.university}
+  </p>
+
+  <h3>Skills</h3>
+  <ul class="skill-list">
+    ${selectedMember.skills.map((skill) => `<li>${skill}</li>`).join("")}
+  </ul>
+
+  <h3>Certifications</h3>
+  <ul>
+    ${selectedMember.certifications
+      .map((certification) => `<li>${certification}</li>`)
+      .join("")}
+  </ul>
+
+<h3>Projects</h3>
+<ul>
+  ${selectedMember.projects
+    .map(
+      (project) => `
+        <li>
+          <strong>${project.name}</strong><br>
+          ${project.description}
+        </li>
+      `,
+    )
+    .join("")}
+</ul>
+
+  <h3>Professional Interests</h3>
+  <ul>
+    ${selectedMember.interests
+      .map((interest) => `<li>${interest}</li>`)
+      .join("")}
+  </ul>
+
+  <h3>Location</h3>
+  <p>${selectedMember.location}</p>
+
+  <h3>Contact</h3>
+
+<p>
+  <a href="mailto:${selectedMember.email}">
+    ${selectedMember.email}
+  </a>
+</p>
+
+${
+  selectedMember.linkedin
+    ? `
+    <p>
+      <a href="${selectedMember.linkedin}" target="_blank" rel="noopener noreferrer">
+        View LinkedIn Profile
+      </a>
+    </p>
+  `
+    : ""
+}
+
+${
+  selectedMember.resume
+    ? `
+    <p>
+      <a href="${selectedMember.resume}" target="_blank" rel="noopener noreferrer">
+        View Resume
+      </a>
+    </p>
+  `
+    : ""
+}
+`;
+
+  profileModal.hidden = false;
+});
+
+closeModalButton.addEventListener("click", () => {
+  profileModal.hidden = true;
 });
