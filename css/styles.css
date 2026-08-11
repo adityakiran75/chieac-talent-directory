@@ -1,0 +1,17 @@
+/* Talent Directory */
+
+#profile-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.profile-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.profile-card h3 {
+  margin-top: 0;
+}
