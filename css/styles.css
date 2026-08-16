@@ -123,3 +123,16 @@
   font-size: 2rem;
   cursor: pointer;
 }
+
+.submission-button {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.profile-submission {
+  margin: 32px 0;
+}
