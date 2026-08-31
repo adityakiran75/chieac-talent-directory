@@ -7,6 +7,7 @@ const modalProfileContent = document.getElementById("modal-profile-content");
 const closeModalButton = document.getElementById("close-modal");
 
 let allMembers = [];
+let lastFocusedButton = null;
 
 fetch("data/members.json")
   .then((response) => response.json())
@@ -40,7 +41,7 @@ function displayMembers(members) {
     profileCard.innerHTML = `
     <img
     src="${member.photo}"
-    alt="Profile placeholder for ${member.name}"
+    alt="Profile photo for ${member.name}"
     class="profile-photo"
   >
 
@@ -62,6 +63,7 @@ function displayMembers(members) {
   type="button"
   class="view-profile-button"
   data-member-id="${member.id}"
+  aria-label="View profile for ${member.name}"
 >
   View Profile
 </button>
@@ -134,6 +136,8 @@ profileContainer.addEventListener("click", (event) => {
   if (!button) {
     return;
   }
+
+  lastFocusedButton = button;
 
   const memberId = Number(button.dataset.memberId);
 
@@ -236,8 +240,23 @@ ${
 `;
 
   profileModal.hidden = false;
+  closeModalButton.focus();
 });
 
 closeModalButton.addEventListener("click", () => {
   profileModal.hidden = true;
+
+  if (lastFocusedButton) {
+    lastFocusedButton.focus();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !profileModal.hidden) {
+    profileModal.hidden = true;
+
+    if (lastFocusedButton) {
+      lastFocusedButton.focus();
+    }
+  }
 });

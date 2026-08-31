@@ -1,19 +1,82 @@
 /* Talent Directory */
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #222222;
+  background-color: #ffffff;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+main {
+  padding-top: 16px;
+  padding-bottom: 40px;
+}
+
+footer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.directory-intro,
+.profile-submission,
+.directory-list {
+  margin-bottom: 32px;
+}
+
+main h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+main h3 {
+  margin-bottom: 8px;
+}
+
 #profile-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
+@media (max-width: 900px) {
+  #profile-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  #profile-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 .profile-card {
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
-  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .profile-card h3 {
-  margin-top: 0;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 1.25rem;
 }
 
 .profile-photo {
@@ -40,7 +103,8 @@
 
 .profile-title {
   font-weight: 600;
-  margin-top: -6px;
+  margin-top: 0;
+  color: #555555;
 }
 
 .interest-list {
@@ -53,6 +117,80 @@
   gap: 24px;
   flex-wrap: wrap;
   margin: 32px 0;
+}
+
+.directory-controls input,
+.directory-controls select {
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.directory-controls button,
+.submission-button,
+.view-profile-button {
+  border: 1px solid #222222;
+  border-radius: 6px;
+  padding: 10px 16px;
+  background-color: #222222;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.directory-controls button:hover,
+.submission-button:hover,
+.view-profile-button:hover {
+  background-color: #444444;
+}
+
+.directory-controls button:hover,
+.submission-button:hover,
+.view-profile-button:hover {
+  background-color: #444444;
+}
+
+/* Home page call-to-action buttons */
+.cta-button {
+  display: inline-block;
+  padding: 10px 16px;
+  margin-right: 12px;
+  margin-top: 8px;
+  border: 1px solid #222222;
+  border-radius: 6px;
+  background-color: #222222;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #444444;
+}
+
+.hero .cta-button {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+  .directory-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-control,
+  .filter-control {
+    width: 100%;
+  }
+
+  .search-control input,
+  .filter-control select,
+  .directory-controls button {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
 }
 
 .search-control,
@@ -112,6 +250,23 @@
   position: relative;
 }
 
+@media (max-width: 600px) {
+  .modal {
+    padding: 12px;
+  }
+
+  .modal-content {
+    max-height: 90vh;
+    padding: 24px 20px;
+    border-radius: 8px;
+  }
+
+  #close-modal {
+    top: 10px;
+    right: 12px;
+  }
+}
+
 #close-modal {
   position: absolute;
   top: 16px;
@@ -134,5 +289,74 @@
 }
 
 .profile-submission {
-  margin: 32px 0;
+  padding: 24px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.about-section,
+.how-it-works,
+.directory-purpose,
+.privacy-section {
+  max-width: 850px;
+}
+
+.about-section,
+.how-it-works,
+.directory-purpose {
+  margin-bottom: 40px;
+}
+
+.about-section p,
+.how-it-works p,
+.directory-purpose p,
+.privacy-section p {
+  color: #444444;
+}
+
+.privacy-section h3 {
+  margin-top: 28px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 4px solid #ffb000;
+  outline-offset: 4px;
 }
